@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #4887E0;
+}
+
+.pesquisa {
+    width: 100%;
+    height: 70px;
+    background-color: #BF3E32;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-pesquisa {
+    width: 210px;
+    height: 29px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(14, 14, 82);
+    background-color: #ffd7d7; 
+    border-radius: 10px;   
+    border: 2px solid white;
+}
+
+.btn-pesquisa {
+    width: 30px;
+    height: 32px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff1e00;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pesquisa > span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.div_button {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #4887E0;
+}
+
+.buttons-a, .buttons-p {
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #eba524;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card {
+    display: grid;
+    grid-template-areas: "lef rig";
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+    height: 465px;
+    position: relative;
+}
+
+.poke-header {
+    width: 300px;
+    height: 35px;
+    background-color: red;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid black;
+}
+
+.poke-header-back {
+    width: 300px;
+    height: 26px;
+    background-color: rgb(211, 3, 3);
+    border-top-right-radius: 10px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: absolute;
+    top: 2%;
+    right: 0;
+}
+
+.blue {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 141, 141);
+    border-radius: 50%;
+    margin: 3px;
+    border: 2px solid rgb(235, 235, 235);
+    position: absolute;
+    top: 0;
+}
+
+.red {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(199, 28, 28);
+    border-radius: 50%;
+    margin: 5px;
+    border: 1.5px solid rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.yellow {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(233, 236, 15);
+    border-radius: 50%;
+    margin: 5px;
+    border: 1.5px solid rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    left: 45px;
+}
+
+.green {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(1, 235, 1);
+    border-radius: 50%;
+    margin: 5px;
+    border: 1.5px solid rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    left: 60px;
+}
+
+.id {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 3px;
+    color: white;
+    font-size: 12px;
+    ;
+}
+
+.blue:hover, .green:hover, .red:hover, .yellow:hover {
+    cursor: pointer;
+    transform: translate(-5px, 5px);
+    transform: scale(1.18);
+}
+
+.left {
+    grid-area: lef;
+    grid-template-areas: "pim pif";
+    flex-direction: column;
+    width: 300px;
+    height: 430px;
+    position: absolute;
+    bottom: 0;
+}
+
+.right {
+    grid-area: rig;
+    width: 300px;
+    height: 430px;
+    position: absolute;
+    bottom: 0;
+}
+
+.poke-img {
+    grid-area: pim;
+    border-left: 2px solid black;    
+    border-right: 2px solid black;
+    width: 300px;
+    height: 215px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-borda {
+    background-image: url(fundodex.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 280px;
+    height: 168px;
+    box-shadow: 0 0 12px black;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.poke-imagem > img {
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+
+.poke-info {
+    grid-area: pif;
+    background-color: rgb(240, 240, 240);
+    border-left: 2px solid black;    
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    width: 300px;
+    height: 215px;
+    position: absolute;
+    bottom: 0;
+}
+
+.info-p {
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.poke-name, .poke-type {
+    padding-left: 10px;
+}
+
+.name, .type {
+    margin: 10px;
+    padding: 10px 13px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    text-align: center;
+}
+
+.peso_altura {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-around    
+}
+
+.altura, .peso {
+    text-align: center;
+}
+
+.poke-height {
+    text-align: center;
+}
+
+.poke-others {
+    grid-area: oth;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 300px;
+    height: 430px;
+    position: absolute;
+    bottom: 0;
+} 
+
+.map {
+    background-color: rgb(157, 0, 0);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.map-img > img {
+    width: 250px;
+    height: 190px;
+    border: 3px solid rgb(57, 57, 57);
+}
+
+.map-buttons {
+    background-color: rgb(211, 3, 3);
+    width: 35px;
+    height: 80px;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px rgb(43, 43, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.map-button {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 24px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.stats {
+    background-color: rgb(211, 3, 3);
+    display: grid;
+    grid-template-areas: "hp spd" "atk def" "satk sdef";
+    width: 100%;
+    height: 50%;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    border-top: 1px solid rgb(157, 0, 0);
+    position: relative;
+}
+
+.hp, .atk, .def, .sp-atk, .sp-def, .spd {
+    width: 126px;
+    height: 23px;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+}
+
+.res-a, .res-d, .res-h, .res-s, .res-sa, .res-sd {
+    width: 126px;
+    font-size: 22px;
+    color: white;
+    background-color: rgb(157, 0, 0);
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgb(157, 0, 0);
+    text-align: center;
+}
+
+.hp {
+    grid-area: hp;
+}
+
+.atk {
+    grid-area: atk;
+}
+
+.def {
+    grid-area: def;
+}
+
+.sp-atk {
+    grid-area: satk;
+}
+
+.sp-def {
+    grid-area: sdef;
+}
+
+.spd {
+    grid-area: spd;
+}
+
